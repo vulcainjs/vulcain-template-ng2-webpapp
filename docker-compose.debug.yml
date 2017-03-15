@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  # <%= project.namespace %>:
+    # image: <%= project.name %>:debug
+    build:
+      context: .
+      dockerfile: Dockerfile.debug
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./dist:/app/dist
+    environment:
+      - REMOTE_DEBUGGING

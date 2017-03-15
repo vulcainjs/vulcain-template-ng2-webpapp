@@ -1,0 +1,27 @@
+FROM node:6-slim
+MAINTAINER <%= project.namespace %>
+
+#CONTENT TBD
+# Probably a custom preconfigured webserver image with shared volume
+# to push ./dist content
+
+RUN apt-get update && apt-get install -y \
+    git
+
+EXPOSE 8080
+
+COPY package.json /app/
+
+WORKDIR /app
+RUN npm install
+RUN npm install express morgan
+
+LABEL vulcain.serviceName=<%=project.namespace %>.<%= project.name %>
+LABEL vulcain.version=1.0.0
+
+COPY src /app/src
+COPY ./* /app/
+
+RUN npm run package:prod
+
+ENTRYPOINT ["node", "index.js"]

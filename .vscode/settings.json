@@ -1,0 +1,13 @@
+{
+  "files.associations": {
+    "DockerFile.debug": "dockerfile",
+    "template.manifest": "json",
+    "*.vulcain": "json"
+  },
+  "workbench.editor.showIcons": true,
+  "editor.renderWhitespace": "all",
+  "editor.folding": true,
+  "files.trimTrailingWhitespace": true,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 3000
+}

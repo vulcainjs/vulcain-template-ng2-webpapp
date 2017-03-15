@@ -1,0 +1,16 @@
+FROM node:6-slim
+
+WORKDIR /app
+
+EXPOSE 8080
+
+LABEL vulcain.serviceName=<%=project.namespace %>.<%= project.name %>
+LABEL vulcain.version=1.0.0
+
+RUN npm install express morgan
+
+COPY index.js /app/
+
+VOLUME /app/dist
+
+ENTRYPOINT ["node", "index.js"]
