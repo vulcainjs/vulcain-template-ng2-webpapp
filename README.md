@@ -33,3 +33,13 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Docker
+
+Use **dockerTask.ps1** or **dockerTask.ps** to build the Docker image depending on your platform (.ps1 for Windows, .sh for Linux/OSX)
+
+The following commands are available:
+
+> `./dockerTask.ps1 -Build -Environment Release` to build a release image
+
+> `./dockerTask.ps1 -ComposeForDebug` uses a shared volumes to monitor the local `dist` folder and serve it through Express
