@@ -2,7 +2,14 @@
 
 # <%= project.safeName %>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0 and use [Angular Material](https://github.com/angular/material2).
+
+## Installation
+
+**BEFORE YOU INSTALL:** please install Angular CLI.
+```bash
+npm install
+```
 
 ## PWA support
 Offline support is configured with sw-precache and dedicated service worker
